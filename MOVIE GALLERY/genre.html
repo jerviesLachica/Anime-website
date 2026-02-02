@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Genre Anime</title>
+
+  <!-- Flickity & Boxicons -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="modern.css" />
+  <link rel="stylesheet" href="anime-modern.css" />
+</head>
+<body>
+  <div class="app-container" id="appContainer">
+    <!-- ===== Sidebar ===== -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="Main.html" class="logo">Jerb Movie</a>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="Main.html" class="sidebar-link"><i class='bx bxs-home'></i> <span>Home</span></a></li>
+      </ul>
+
+      <div class="sidebar-section">
+        <h3>You</h3>
+        <ul class="sidebar-menu">
+          <li><a href="#" class="sidebar-link"><i class='bx bxs-collection'></i> <span>Library</span></a></li>
+          <li><a href="history.html" class="sidebar-link"><i class='bx bx-history'></i> <span>History</span></a></li>
+          <li><a href="login page.html" id="loginLink" class="sidebar-link"><i class='bx bx-log-in'></i> <span>Login</span></a></li>
+          <li><a href="#" id="logoutLink" class="sidebar-link" style="display: none;"><i class='bx bx-log-out'></i> <span>Logout</span></a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Explore</h3>
+        <ul class="sidebar-menu">
+          <li class="explore-section">
+            <a href="#" class="sidebar-link explore-toggle"><i class='bx bx-compass'></i> <span>Explore</span> <i class='bx bx-chevron-down explore-icon'></i></a>
+            <ul class="explore-genres" id="exploreGenres">
+              <!-- Anime genres will be populated here by Main.js -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Copyright</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Creators</a></li>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Developers</a></li>
+        </ul>
+        <ul class="footer-links">
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Policy & Safety</a></li>
+          <li><a href="#">How Jerb Movie works</a></li>
+          <li><a href="#">Test new features</a></li>
+        </ul>
+        <p class="copyright">&copy; 2024 Jerb Movie</p>
+      </div>
+    </nav>
+
+    <!-- ===== Main Content Area ===== -->
+    <div class="content-area">
+      <!-- ===== Navigation ===== -->
+      <header>
+        <div class="menu-toggle" id="menuToggle">
+          <i class='bx bx-menu'></i>
+        </div>
+        <div class="search-container">
+          <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for an anime..." />
+          </div>
+          <div id="searchResults" class="search-results"></div>
+        </div>
+        <nav class="header-nav">
+          <!-- User-related links are now in the sidebar -->
+        </nav>
+      </header>
+
+      <!-- ===== Genre Content ===== -->
+      <main id="main-content">
+        <section class="items genre-category">
+          <h2 class="section-title" id="genreTitle"></h2>
+          <div class="anime-grid" id="genreAnimeList">
+            <!-- Anime cards for this genre will be generated here -->
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="anime-data.js"></script>
+  <script src="auth.js"></script>
+  <script src="genre.js"></script>
+</body>
+</html>

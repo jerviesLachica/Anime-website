@@ -1,0 +1,23 @@
+/* Main.css - Specific overrides and adjustments for Jerb Movie layout */
+/* Adjustments for the header navigation links */
+.header-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header-nav .nav-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: white;
+  text-decoration: none;
+}
+
+.header-nav .nav-link:hover {
+  background-color: #444;
+}
+
+/* Explore Genres List Styling for Retract/Expand */
+/* This is now handled in modern.css */
